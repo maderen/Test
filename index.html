@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function ma() {
+            var x, y, z;
+            //x=parseInt(prompt("请输入一个正整数x=",""));
+            //y=parseInt(prompt("请输入一个正整数y=",""));
+            //op=prompt("请输入一个操作符(+，-，*，/)：","");
+            var x = document.getElementById("shu1").value-0;
+            var y = document.getElementById("shu2").value-0;
+            var op = document.getElementById("shu3").value;
+            //alert(x+y+op);
+            switch (op) {
+                case '+':
+                    z = x + y;
+                    break;
+                case '-':
+                    z = x - y;
+                    break;
+                case '*':
+                    z = x * y;
+                    break;
+                case '/':
+                    z = x / y;
+                    break;
+            }
+            //alert(z)
+            document.getElementById("shu4").value=z;
+        }
+        //alert("the result is:"+z);
+    </script>
+</head>
+<body>
+<table align="center">
+    <tr>
+        <td>请输入一个正整数x=</td>
+        <td><input type="text" id="shu1"/></td>
+    </tr>
+    <tr>
+        <td>请输入一个正整数y=</td>
+        <td><input type="text" id="shu2"/></td>
+    </tr>
+    <tr>
+        <td>请输入一个操作符(+，-，*，/)：</td>
+        <td><input type="text" id="shu3"/></td>
+    </tr>
+    <tr>
+        <td ><input type="button" onclick="ma()" value="计算"></td>
+    </tr>
+    <tr>
+        <td>结果为：</td>
+        <td><input type="text" id="shu4"/></td>
+    </tr>
+</table>
+</body>
+</html>
